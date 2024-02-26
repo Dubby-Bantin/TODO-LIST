@@ -1,0 +1,79 @@
+*{
+    font-family: Arial, Helvetica, sans-serif;
+    text-transform: capitalize;
+    border: 0;
+    padding: 0;
+    box-sizing: border-box;
+    color: blue;
+    font-family: "Lily Script One", system-ui;
+    font-style: normal;
+}
+
+body{
+    display: grid;
+    place-items: center;
+    background: linear-gradient(to bottom, blue, black);
+    background-repeat: no-repeat;
+    height: 97.8vh;
+}
+
+h1{
+    color: black;
+    font-family: "Kavoon", serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.todo-grid, .todo-input-grid{
+    display: grid;
+    grid-template-columns: 200px 150px 100px;
+    gap: 10px;
+    align-items: center;
+}
+
+.name-input, .due-date-input{
+    font-size: 1rem;
+    padding: 6px;
+    border: 1px solid rgb(1, 23, 1);
+    outline: none;
+    color: blue;
+}
+
+.name-input:focus{
+    border: 1px solid blue;
+}
+
+.todo-input-grid{
+    align-items: stretch;
+}
+
+.add-todo-button{
+    font-size: 1rem;
+    background-color: black;
+    border: 0;
+    cursor: pointer;
+}
+
+.delete-todo-button{
+    background-color: black;
+    border: 0;
+    font-size: 1rem;
+    padding: 10px;
+    cursor: pointer;
+}
+
+    @media (max-width: 500px){
+
+        .name-input, .due-date-input{
+            font-size: .7rem;
+            width: 5rem;
+        }
+    
+        .todo-grid, .todo-input-grid{
+            grid-template-columns: 100px 100px 100px;
+        }
+    
+        .add-todo-button{
+            padding: .6rem;
+        }
+    }
